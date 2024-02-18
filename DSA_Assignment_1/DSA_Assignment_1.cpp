@@ -107,6 +107,8 @@ void read() {
         cptr->convertToDouble();
         cptr->convertToInt();
     }
+
+    cout << "data loaded!" << endl;
 }
 
 void display()
@@ -149,8 +151,8 @@ void insert() {
     cin.ignore();
     getline(cin, cptr->category);
 
-    cptr->convertToDouble();
-    cptr->convertToInt();
+    //cptr->convertToDouble();
+    //cptr->convertToInt();
     // Insert into the linked list
     if (hptr == nullptr) {
         // First item in the list. Point hptr at it
@@ -162,6 +164,7 @@ void insert() {
 
     
 }
+
 
 Product* search(int x)
 {
@@ -378,7 +381,8 @@ void displayMenu()
     std::chrono::time_point<chrono::system_clock> start;
     std::chrono::time_point<chrono::system_clock> end;
     cout << 
-                "Please select an option between 1,2,3,4,5,6:\n "
+                "Please select an option between 0,1,2,3,4,5,6:\n "
+                "\n0. Load Data\n"
                 "1. Display products\n"
                 "2. Search for product\n"
                 "3. Sort Products\n"
@@ -390,6 +394,10 @@ void displayMenu()
     
     switch(choice)
     {
+    case 0:
+        read();
+        displayMenu();
+        break;
     case 1:
         display();
         displayMenu();
