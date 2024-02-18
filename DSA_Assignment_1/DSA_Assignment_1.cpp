@@ -151,8 +151,8 @@ void insert() {
     cin.ignore();
     getline(cin, cptr->category);
 
-    //cptr->convertToDouble();
-    //cptr->convertToInt();
+    
+    
     // Insert into the linked list
     if (hptr == nullptr) {
         // First item in the list. Point hptr at it
@@ -242,26 +242,6 @@ void BubbleSort()
             curr = curr->next;
         }
     }
-        /*    current = hptr;
-            temp = nullptr;
-            while (current != nullptr)
-            {
-                if(current->next != nullptr && current->id > current->next->id)
-                {
-                    temp = current->next;
-                    current->next = current;
-                    current = temp;
-            
-                }
-                current = current->next;
-                
-            }
-            
-            if(temp == hptr)
-            {
-                hptr = hptr->next;
-            }*/
-
     
 } 
 
@@ -461,18 +441,7 @@ int main()
     
     
     
-    /*start = chrono::system_clock::now();
-    BubbleSort();
-    end = chrono::system_clock::now();
-    duration = (std::chrono::duration_cast<chrono::nanoseconds>(end - start));
-    std::cout << "Best case Time taken to sort: " << duration.count() << " nanoseconds. \n" << std::endl;
-
-    ReverseBubbleSort();
-    start = chrono::system_clock::now();
-    BubbleSort();
-    end = chrono::system_clock::now();
-    duration = (std::chrono::duration_cast<chrono::nanoseconds>(end - start));
-    std::cout << "Worst case time taken to sort: " << duration.count() << " nanoseconds. \n" << std::endl;
+    
     
     
     //display();
